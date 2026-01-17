@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.game-container {
+  background: white;
+  border-radius: 30px;
+  padding: 40px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.game-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.game-header h1 {
+  color: #667eea;
+  font-size: 3em;
+}
+
+.instructions {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 15px 35px;
+  border-radius: 25px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+.start-btn {
+  background: linear-gradient(135deg, #84fab0, #8fd3f4);
+}
+
+.reset-btn {
+  background: linear-gradient(135deg, #fa709a, #fee140);
+}
+
+.score-board {
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.score-value {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.question-area {
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.question {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.answers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.answer-btn {
+  padding: 25px;
+  font-size: 2em;
+  border-radius: 20px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+  border: none;
+}
+
+.answer-btn.correct {
+  background: linear-gradient(135deg, #84fab0, #8fd3f4);
+}
+
+.answer-btn.wrong {
+  background: linear-gradient(135deg, #fa709a, #fee140);
+}
+
+.game-over {
+  display: none;
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+}
+
+.game-over.show {
+  display: block;
+}
+
+.timer-warning {
+  color: red;
+}
+
+

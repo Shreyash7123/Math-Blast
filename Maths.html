@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Math Blast - Educational Game</title>
+  <link rel="stylesheet" href="Maths.css"/>
+</head>
+
+<body>
+  <div class="game-container">
+    <div class="game-header">
+      <h1>🔢 Math Blast 🔢</h1>
+      <p>Solve as many math problems as you can!</p>
+    </div>
+
+    <div class="instructions">
+      <h3>How to Play:</h3>
+      <p>
+        Click START to begin. You have 30 seconds to solve as many math problems as possible.
+        Click the correct answer to score points!
+      </p>
+    </div>
+
+    <div class="controls">
+      <button class="btn start-btn" onclick="startGame()">START</button>
+      <button class="btn reset-btn" onclick="resetGame()">RESET</button>
+    </div>
+
+    <div class="score-board">
+      <div class="score-item">
+        <div class="score-label">Score</div>
+        <div class="score-value" id="score">0</div>
+      </div>
+
+      <div class="score-item">
+        <div class="score-label">Time</div>
+        <div class="score-value" id="timer">30</div>
+      </div>
+
+      <div class="score-item">
+        <div class="score-label">Streak</div>
+        <div class="score-value" id="streak">0</div>
+      </div>
+    </div>
+
+    <div class="question-area">
+      <div class="question" id="question">Click START to begin!</div>
+    </div>
+
+    <div class="answers-grid" id="answersGrid"></div>
+
+    <div class="game-over" id="gameOver">
+      <h2>🎉 Game Over! 🎉</h2>
+      <p id="finalScore">Your final score: 0</p>
+      <p id="performance"></p>
+    </div>
+  </div>
+
+  <script src="Maths.js"></script>
+</body>
+</html>
